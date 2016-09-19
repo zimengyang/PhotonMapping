@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scene>
+	<camera>
+		<target>0 0 0</target>
+		<eye>0 5 10</eye>
+		<worldUp>0 1 0</worldUp>
+		<fov>50</fov>
+		<width>600</width>
+		<height>600</height>
+	</camera>
+
+	<geometry type="square" name="Back Wall">
+		<transform>
+			<translate>0 0 -5</translate>
+			<scale>10 10 1</scale>
+		</transform>
+		<material>white_diffuse</material>
+	</geometry>
+
+	<geometry type="square" name="Right Wall">
+		<transform>
+			<translate>5 0 0</translate>
+			<rotate>0 -90 0</rotate>
+			<scale>10 10 1</scale>
+		</transform>
+		<material>green_diffuse</material>
+	</geometry>
+
+	<geometry type="square" name="Left Wall">
+		<transform>
+			<translate>-5 0 0</translate>
+			<rotate>0 90 0</rotate>
+			<scale>10 10 1</scale>
+		</transform>
+		<material>red_diffuse</material>
+	</geometry>
+
+	<geometry type="square" name="Ceiling">
+		<transform>
+			<translate>0 5 0</translate>
+			<rotate>90 0 0</rotate>
+			<scale>10 10 1</scale>
+		</transform>
+		<material>gray_diffuse</material>
+	</geometry>
+
+	<geometry type="square" name="Floor">
+		<transform>
+			<translate>0 -5 0</translate>
+			<rotate>-90 0 0</rotate>
+			<scale>10 10 1</scale>
+		</transform>
+		<material>gray_diffuse</material>
+	</geometry>
+
+	<geometry type="obj" name="OBJ">
+		<filename>objs/teapot.obj</filename>
+		<transform>
+			<translate>0 0 0</translate>
+			<scale>2.5 2.5 2.5</scale>
+		</transform>
+		<material>obj_material</material>
+	</geometry>
+
+	<geometry type="sphere" name="Light Source">
+		<transform>
+			<translate>0 4 0</translate>
+			<scale>2 2 2</scale>
+		</transform>
+		<material>emissive_material</material>
+	</geometry>
+
+	<material type="default" name="white_diffuse">
+		<baseColor>1 1 1</baseColor>
+		<bxdf>lambert1</bxdf>
+	</material>
+
+	<material type="default" name="gray_diffuse">
+		<baseColor>0.5 0.5 0.5</baseColor>
+		<bxdf>lambert1</bxdf>
+	</material>
+
+	<material type="default" name="red_diffuse">
+		<baseColor>1 0 0</baseColor>
+		<bxdf>lambert1</bxdf>
+	</material>
+
+	<material type="default" name="green_diffuse">
+		<baseColor>0 1 0</baseColor>
+		<bxdf>lambert1</bxdf>
+	</material>
+
+	<material type="default" name="yellow_diffuse">
+		<baseColor>1 1 0.25</baseColor>
+		<bxdf>lambert1</bxdf>
+	</material>
+
+	<material type="default" name="textured_diffuse">
+		<baseColor>1 1 1</baseColor>
+		<texture>tex_nor_maps/165.jpg</texture>
+		<normalMap>tex_nor_maps/165_norm.jpg</normalMap>
+		<bxdf>lambert1</bxdf>
+	</material>
+
+	<material type="default" name="obj_material">
+		<baseColor>1 1 1</baseColor>
+		<bxdf>transbxdf1</bxdf>
+	</material>
+
+	<material type="default" name="reflective_white">
+		<baseColor>1 1 1</baseColor>
+		<bxdf>specular1</bxdf>
+	</material>
+
+	<material type="default" name="blinn_material">
+		<baseColor>0.25 1 0.25</baseColor>
+		<bxdf>blinn1</bxdf>
+	</material>	
+
+	<bxdf type="blinnMicrofacet" name="blinn1" diffuseColor="1 1 1" exponent="2000">
+	</bxdf>
+
+	<material type="weighted" name="plastic_material">
+		<baseColor>1 1 1</baseColor>
+		<bxdf>transbxdf1</bxdf><weight>1.0</weight>
+	</material>
+
+	<bxdf type="specularReflection" name="specular1" reflectionColor="1 1 1">
+	</bxdf>
+
+	<material type="light" name="emissive_material" intensity="30">
+		<baseColor>1 1 1</baseColor>
+	</material>
+
+	<bxdf type="blinnMicrofacet" name="blinn2" diffuseColor="1 1 1" exponent="20">
+	</bxdf>
+	
+	<bxdf type="lambert" name="lambert1" diffuseColor="1 1 1">
+	</bxdf>
+
+	<bxdf type="transmission" name="transbxdf1" etai="1" etat="1.5" transmissionColor="1 1 1">
+	</bxdf>
+
+	<integrator type="indirectLighting">
+		<maxDepth>5</maxDepth>
+	</integrator>
+
+	<pixelSampleLength>1</pixelSampleLength>
+
+</scene>

@@ -1,0 +1,14 @@
+#include <raytracing/bidirectionalintegrator.h>
+
+BidirectionalIntegrator::BidirectionalIntegrator()
+{
+    // constructor
+}
+
+glm::vec3 BidirectionalIntegrator::TraceRay(Ray r, unsigned int depth)
+{
+    
+    glm::vec3 resultColor(0);
+    
+    return resultColor;
+}
