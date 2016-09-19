@@ -22,6 +22,7 @@ Yellow glass dragon and mirror wall(reflective)
 * [x] **Caustic, indirect and radiance** photon calculation and storage
 * [ ] Complicated material implementation
 * [ ] Double check Fresnel and reflection models
+* [ ] Final gathering and indirect lighting
  
 
 ## Other renders
