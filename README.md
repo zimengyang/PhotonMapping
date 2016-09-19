@@ -14,7 +14,16 @@ Yellow glass dragon and mirror wall(reflective)
 ![](renders/dragon_glass_yellow_3AA_near.png)
 ![](renders/dragon_glass_yellow_3AA_far.png)
 
-------
+## Roadmap
+
+* [x] **Kd-Tree** Acceleration Structure, lookup photons
+* [x] **Multi-thread** shooting photon tasks
+* [x] **LPhoton** and **EPhoton** calculation
+* [] Complicated material implementation
+* [] Double check Fresnel and reflection models
+ 
+
+## Other renders
 Yellow glass teapot, specular transmissive sphere and reflective wall
 
 ![](renders/teapot_glass_yellow_sphere_3AA.png)
