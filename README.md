@@ -19,6 +19,7 @@ Yellow glass dragon and mirror wall(reflective)
 * [x] **Kd-Tree** Acceleration Structure, lookup photons
 * [x] **Multi-thread** shooting photon tasks
 * [x] **LPhoton** and **EPhoton** calculation
+* [x] **Caustic, indirect and radiance** photon calculation and storage
 * [ ] Complicated material implementation
 * [ ] Double check Fresnel and reflection models
  
