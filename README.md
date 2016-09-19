@@ -3,6 +3,18 @@
 Personal Computer Graphics Project: Physically Based Rendering. 
 
 ## Renders
+
+White glass teapot and reflective sphere
+
+![](renders/teapot_glass_white_3AA.png)
+
+------
+Yellow glass dragon and mirror wall(reflective)
+
+![](renders/dragon_glass_yellow_3AA_near.png)
+![](renders/dragon_glass_yellow_3AA_far.png)
+
+------
 Yellow glass teapot, specular transmissive sphere and reflective wall
 
 ![](renders/teapot_glass_yellow_sphere_3AA.png)
@@ -20,16 +32,6 @@ Transmissive teapot and reflective back wall
 
 ![](renders/teapot_transmissive_back_mirror_3AA.png)
 
-------
-White glass teapot
-
-![](renders/teapot_glass_white_3AA.png)
-
-------
-Yellow glass dragon and mirron wall(reflective)
-
-![](renders/dragon_glass_yellow_3AA_near.png)
-![](renders/dragon_glass_yellow_3AA_far.png)
 
 ------
 Prism with 80% reflection and 20% transmission material
